@@ -1,6 +1,7 @@
 import React from 'react';
 import './moviecarte.css';
 import StarRatingComponent from 'react-star-rating-component';
+import {Link} from 'react-router-dom'
 
 const MovieCard = ({movie}) => {
   return (
@@ -23,6 +24,7 @@ const MovieCard = ({movie}) => {
           value={movie.rate}
           
         />
+        <Link to={`/movie/${movie.id}`}>Detail</Link>
       </div>
      
       <div class="movie_social">
